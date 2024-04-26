@@ -1,3 +1,12 @@
+# Documentación del Proyecto: Homenaje a Marea
+
+Este documento explica detalladamente cada paso realizado en el desarrollo del proyecto web de la PEC1 de Herramientas HTML y CSS I, utilizando Parcel como empaquetador. También se describen las decisiones técnicas y las configuraciones aplicadas.
+
+## Enlaces Importantes
+
+- **Repositorio del código:** [GitHub - P1-Desarrollo-de-una-web](https://github.com/pHachepe/P1-Desarrollo-de-una-web)
+- **URL pública de la web:** [Homenaje a Marea](https://homenaje-marea.vercel.app)
+
 # 1. Creación del Boilerplate Basado en Parcel
 
 ## Configuración Inicial del Proyecto
