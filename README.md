@@ -1,6 +1,11 @@
-Lo primero que haremos será crear toda la estructura de carpetas y archivos necesarios para nuestro proyecto:
+# 1. Creación del Boilerplate Basado en Parcel
 
-```bash
+## Configuración Inicial del Proyecto
+
+Para iniciar, establecemos la estructura de directorios y archivos que organizan claramente los componentes, estilos y scripts del proyecto, me he basado en los ejemplos del módulo 2 y en la documentación oficial de Parcel.
+La división de los estilos podría mejorarse, pero por simplicidad he optado por una estructura básica.
+He creado un json con los datos de los álbumes, para poder mostrarlos en la página de categoría(discografía) y en la página de detalle de forma dinámica.
+```
 PEC1
 ├── .gitignore
 ├── .posthtmlrc
@@ -11,16 +16,6 @@ PEC1
     ├── assets
     │   └── images
     │       ├── albums
-    │       │   ├── 01-la-patera-670x670.jpg
-    │       │   ├── 02-revolcon-670x670.jpg
-    │       │   ├── 03-28000-punaladas-670x670.jpg
-    │       │   ├── 04-besos-de-perro-670x670.jpg
-    │       │   ├── 05-las-aceras-estan-llenas-de-piojos-1-670x670.jpg
-    │       │   ├── 06-jauria-de-perros-verdes-670x670.jpg
-    │       │   ├── 07-las-putas-mas-viejas-del-mundo-670x670.jpg
-    │       │   ├── 08-en-mi-hambre-mando-yo-670x670.jpg
-    │       │   ├── 09-el-azogue-670x670.jpg
-    │       │   └── 10-los-potros-del-tiempo-670x670.jpg
     │       ├── logo.png
     │       └── portada.jpeg
     ├── components
@@ -37,21 +32,23 @@ PEC1
     ├── scripts
     │   ├── category.js
     │   ├── detail.js
-    │   ├── header.js
-    │   ├── links.js
-    │   └── main.js
+    │   └── header.js
     └── styles
+        ├── _base.scss
+        ├── _header.scss
+        ├── _responsive.scss
+        ├── _variables.scss
         └── main.scss
 ```
 
-Luego inicializamos nuestro proyecto en node.js y en git:
+Inicializamos Node.js y Git en nuestro proyecto para preparar el entorno de desarrollo:
 
 ```bash
 npm init -y
 git init
 ```
 
-Creamos el fichero .gitignore en la raíz de nuestro proyecto y agregamos las siguientes líneas para ignorar los directorios que no queremos subir a nuestro repositorio:
+Creamos un `.gitignore` para evitar subir directorios y archivos no necesarios al repositorio:
 
 ```
 node_modules
@@ -59,50 +56,27 @@ dist
 .parcel-cache
 ```
 
-Ahora instalamos los paquetes que vamos a necesitar:
+## Configuración de Scripts en `package.json`
 
-```bash
-npm install --save-dev parcel
-npm install --save-dev @parcel/transformer-sass
-npm install --save-dev posthtml-include
-npm install --save-dev rimraf npm-run-all.
+Configuramos los siguientes scripts en Parcel para simplificar las tareas de desarrollo y producción:
+
+- **start**: `"npm-run-all clean parcel:dev"`
+    - Ejecuta `clean` seguido de `parcel:dev` para iniciar el servidor de desarrollo con una configuración limpia.
+- **build**: `"npm-run-all clean parcel:build"`
+    - Compila los archivos para producción después de limpiar, optimizando para el mejor rendimiento.
+- **clean**: `"rimraf dist .parcel-cache"`
+    - Limpia el proyecto eliminando los directorios `dist` y `.parcel-cache`, asegurando compilaciones limpias.
+- **parcel:dev**: `"parcel serve src/pages/*.html --open"`
+    - Inicia Parcel en modo desarrollo, sirviendo todas las páginas HTML desde `src/pages`, y abre automáticamente la página en el navegador.
+- **parcel:build**: `"parcel build src/pages/*.html --dist-dir dist --public-url ./"`
+    - Compila y optimiza los archivos para producción, configurando el directorio de salida en `dist` y ajustando la URL pública para los recursos.
+
+## Soporte para Navegadores Antiguos
+
+Utilizamos el campo `browserslist` en el `package.json` para definir qué versiones de navegadores queremos soportar. Esto es crucial para asegurar que nuestro sitio funcione correctamente en navegadores tanto modernos como antiguos.
+
+```
+"browserslist": "> 0.5%, last 2 versions, not dead"
 ```
 
-Eliminamos main de package.json porque interfiere con parcel:
-
-```json
-  "main": "index.js",
-```
-
-Agregamos los scripts en nuestro package.json:
-
-```json
-  "scripts": {
-    "start": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "parcel:dev": "parcel src/pages/index.html",
-    "parcel:build": "parcel build src/pages/index.html --dist-dir dist",
-    "clean": "rimraf dist .parcel-cache"
-  }
-```
-
-Añadimos al package.json la configuración de browserslist para indicar qué versiones de navegadores queremos soportar en nuestro proyecto:
-
-```json
-  "browserslist": "> 0.5%, last 2 versions, not dead",
-```
-
-Creamos el fichero .posthtmlrc.json en la raíz de nuestro proyecto:
-
-```json
-{
-  "plugins": {
-    "posthtml-include": {
-      "root": "./src"
-    }
-  }
-}
-```
-
-npm install @fortawesome/fontawesome-free
+Esta configuración inicial establece las bases para la creación de un boilerplate basado en Parcel, que nos permitirá desarrollar un proyecto bien organizado, optimizado y con soporte para navegadores antiguos.
