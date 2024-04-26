@@ -177,3 +177,39 @@ Los comandos más básicos de Git utilizados para la gestión del proyecto son:
 - **git add .** - Prepara los cambios actuales para el siguiente commit.
 - **git commit -m "Descripción de los cambios"** - Guarda una instantánea de los cambios con un mensaje autoexplicativo de los cambios realizados.
 - **git push** - Envía los cambios al repositorio remoto, actualizando el proyecto alojado en GitHub.
+
+# 4. Adecuación a la Temática y Estructura de la Práctica
+
+La adecuación del proyecto a la temática y la estructura es un aspecto básico para garantizar que el sitio web cumpla con los objetivos establecidos y las necesidades del curso.
+La temática del proyecto se centra en rendir homenaje al grupo musical "Marea", por lo que el diseño y contenido del sitio están orientados a reflejar la estética y el estilo de la banda. La mayoría de las decisiones de diseño y estructura se basan en la identidad visual reflejada en su web oficial.
+
+## Temática del Sitio
+
+El sitio web está diseñado para capturar la esencia de "Marea", utilizando una paleta de colores oscuros y semitransparencias oscuras que recuerdan al estilo rock y underground. Las imágenes utilizadas están extraídas de la web oficial de la banda y de su discografía, y son clave para establecer el tono visual oscuro del sitio. Se incluyen fotos de la banda, portadas de álbumes y un videoclip de una de sus canciones más conocidas en la página de presentación, mostrado de fondo con una transparencia baja para no interferir con el contenido.
+
+## Estructura del Sitio
+
+La estructura del sitio se organiza de la siguiente manera para asegurar que se encuentre fácilmente la información y que sea una navegación intuitiva:
+
+- **Inicio**: Presenta brevemente a la banda y ofrece un menú claro para acceder a las diferentes secciones.
+- **Discografía (Categoría)**: Detalla los álbumes de la banda, cada uno con su propia subpágina donde se puede encontrar más información sobre cada álbum específico, se muestra de forma dinámica con los datos almacenados en un archivo json.
+- **Detalles del Álbum**: Proporciona información sobre cada álbum, incluyendo portadas, listados de canciones, fechas de lanzamiento y pequeñas reseñas o anécdotas de la creación del álbum.
+- **Biografía (Presentación)**: Narra la historia de la banda, sus inicios, evolución y los hitos más importantes en su carrera, con un video de fondo que muestra la energía y la pasión de la banda en directo.
+- **Enlaces**: Ofrece información sobre los derechos de autor, el origen de las imágenes y videos utilizados, y enlaces a las fuentes originales para respetar la propiedad intelectual de la banda y a los creadores del contenido original. Así como las fuentes de información y recursos utilizados para la creación del sitio.
+
+## Adaptación a la Práctica
+
+La implementación del sitio sigue las directrices de los dos primeros módulos de Herramientas HTML y CSS I, asegurando que se utilizan técnicas actuales y efectivas para el desarrollo web:
+
+- **HTML Semántico**: Uso de etiquetas semánticas que definen claramente las partes del sitio (como `<header>`, `<footer>`, `<main>`, y `<aside>`), mejorando tanto la accesibilidad como el SEO.
+- **CSS Moderno y Responsive**: Utilización de Flexbox y Grid para layouts responsivos que se adaptan a diferentes tamaños de pantalla, asegurando una experiencia de usuario coherente en dispositivos móviles, tablets y desktops.
+- **Parcel como Herramienta de Construcción**: Facilita la automatización de tareas como la minificación de código y la compilación de SASS a CSS, optimizando los tiempos de carga y la eficiencia del desarrollo.
+- **Inclusión de Fragmentos HTML**: Utilización de PostHTML para incluir fragmentos de HTML reutilizables en diferentes páginas, como el encabezado y el pie de página, simplificando la gestión y mantenimiento del código.
+- **Importación de Estilos y Scripts**: Organización de los estilos y scripts en archivos separados y su importación en el archivo principal, permitiendo una estructura modular y escalable del proyecto. Usando SASS para la creación de estilos y JavaScript para la interactividad de la página. Con las dependencias de transformer-sass y transformar-js de Parcel.
+- **Datos Dinámicos con JSON**: Almacenamiento de los datos de los álbumes en un archivo JSON para mostrarlos de forma dinámica en la página de discografía y en las subpáginas de detalle de álbumes, permitiendo una actualización sencilla y escalable de la información.
+- **FontAwesome para Iconos**: Integración de FontAwesome para añadir iconos vectoriales a la web, mejorando la estética y la usabilidad del sitio sin sacrificar la velocidad de carga.
+- **Gestión de Dependencias con npm**: Utilización de npm para gestionar las dependencias del proyecto, asegurando que las versiones de las librerías y herramientas utilizadas sean coherentes y actualizadas.
+- **Git para Control de Versiones**: Utilización de Git para el control de versiones del proyecto, permitiendo un seguimiento detallado de los cambios realizados y facilitando la colaboración en el desarrollo del sitio.
+- **GitHub para Repositorio Remoto**: Creación de un repositorio remoto en GitHub para alojar el código del proyecto.
+- **Vercel para Despliegue**: Utilización de Vercel para desplegar el sitio web de forma pública y accesible, permitiendo una visualización y compartición sencilla del proyecto.
+- **Documentación Detallada**: Creación de un README.md detallado que explica cada paso del desarrollo del proyecto, las decisiones técnicas tomadas y las configuraciones aplicadas, facilitando la comprensión y el seguimiento del proceso.
