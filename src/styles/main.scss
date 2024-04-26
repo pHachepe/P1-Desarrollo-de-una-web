@@ -240,13 +240,17 @@ footer {
   display: flex;
   align-items: flex-start;
   margin-top: 1rem;
-}
+  gap: 1rem;
 
-.album-image {
-  width: 400px;
-  height: auto;
-  margin-right: 1rem;
-  border-radius: 10px;
+  .album-image-container {
+    width: 100%;
+    position: relative;
+    .album-image {
+      height: auto;
+      margin-right: 1rem;
+      border-radius: 10px;
+    }
+  }
 }
 
 .album-info {
