@@ -57,6 +57,17 @@ npm init -y
 git init
 ```
 
+Instalamos Parcel como dependencia de desarrollo:
+
+```bash
+npm install parcel --save-dev
+```
+
+Eliminamos main de package.json porque interfiere con parcel:
+```json
+  "main": "index.js",
+```
+
 Creamos un `.gitignore` para evitar subir directorios y archivos no necesarios al repositorio:
 
 ```
@@ -89,3 +100,48 @@ Utilizamos el campo `browserslist` en el `package.json` para definir qué versio
 ```
 
 Esta configuración inicial establece las bases para la creación de un boilerplate basado en Parcel, que nos permitirá desarrollar un proyecto bien organizado, optimizado y con soporte para navegadores antiguos.
+
+# 2. Gestión de Dependencias: Pre- o Postprocesadores y Dependencias Adicionales
+
+## Dependencias Internas Utilizadas
+
+- **@parcel/transformer-sass**
+   - **Descripción**: Permite a Parcel compilar archivos SASS o SCSS a CSS, ofreciendo funcionalidades avanzadas como variables, mixins y anidación.
+   - **Instalación**: Se puede instalar a través de npm ejecutando `npm install @parcel/transformer-sass --save-dev`.
+   - **Configuración**: Parcel gestiona automáticamente la compilación de SASS cuando el paquete está instalado. No se necesita configuración adicional en el `package.json` para su funcionamiento básico.
+   - **Impacto en Producción**: Optimiza y minimiza el CSS generado, mejorando la carga de la página y el rendimiento.
+
+- **posthtml-include**
+   - **Descripción**: Permite incluir fragmentos de HTML dentro de otros archivos HTML, ideal para reutilizar componentes como encabezados y pies de página.
+   - **Instalación**: Se puede instalar a través de npm ejecutando `npm install posthtml-include --save-dev`.
+   - **Configuración**: Requiere un archivo `.posthtmlrc.json` en la raíz del proyecto. Aquí se define el directorio raíz para los includes, permitiendo que el proceso de compilación sepa dónde buscar los archivos a incluir.
+     ```json
+     {
+       "plugins": {
+         "posthtml-include": {
+           "root": "./src"
+         }
+       }
+     }
+     ```
+   - **Impacto en Producción**: Compila todos los fragmentos en un único archivo HTML por página, disminuyendo el número de solicitudes HTTP necesarias y mejorando la velocidad de carga.
+
+## Dependencia Externa: FontAwesome
+- **rimraf**
+  - **Descripción**: Permite eliminar directorios y archivos de forma cruzada, compatible con Windows, Linux y macOS.
+  - **Instalación**: Se puede instalar a través de npm ejecutando `npm install rimraf --save-dev`.
+  - **Configuración**: Se utiliza en el script `clean` para eliminar los directorios `dist` y `.parcel-cache` antes de cada compilación.
+  - **Impacto en Producción**: Asegura que las compilaciones se realicen en un entorno limpio, evitando conflictos y errores.
+- **npm-run-all**
+  - **Descripción**: Permite ejecutar múltiples scripts de npm en paralelo o en serie, simplificando la ejecución de tareas complejas.
+  - **Instalación**: Se puede instalar a través de npm ejecutando `npm install npm-run-all --save-dev`.
+  - **Configuración**: Se utiliza en los scripts `start` y `build` para ejecutar tareas en secuencia, como limpiar el proyecto y compilar los archivos.
+  - **Impacto en Producción**: Mejora la eficiencia y la organización de los scripts, permitiendo una gestión más sencilla de las tareas de desarrollo y producción.
+- **FontAwesome**
+  - **Descripción**: Proporciona una extensa biblioteca de iconos vectoriales que se pueden usar fácilmente en proyectos web.
+  - **Instalación**: Se puede instalar a través de npm ejecutando `npm install @fortawesome/fontawesome-free --save`.
+  - **Configuración**: Después de instalar FontAwesome, los iconos pueden ser agregados a cualquier archivo HTML o CSS simplemente referenciando las clases proporcionadas por FontAwesome. Por ejemplo, para agregar un icono del logo de GitHub:
+    ```html
+    <i class="fab fa-github"></i>
+    ```
+  - **Impacto en Producción**: Los iconos se cargan de manera eficiente usando fuentes o SVG, lo que mejora la estética del sitio sin comprometer la velocidad de carga.
