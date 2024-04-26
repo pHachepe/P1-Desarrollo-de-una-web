@@ -213,3 +213,151 @@ La implementación del sitio sigue las directrices de los dos primeros módulos 
 - **GitHub para Repositorio Remoto**: Creación de un repositorio remoto en GitHub para alojar el código del proyecto.
 - **Vercel para Despliegue**: Utilización de Vercel para desplegar el sitio web de forma pública y accesible, permitiendo una visualización y compartición sencilla del proyecto.
 - **Documentación Detallada**: Creación de un README.md detallado que explica cada paso del desarrollo del proyecto, las decisiones técnicas tomadas y las configuraciones aplicadas, facilitando la comprensión y el seguimiento del proceso.
+
+# 5. Diseño Responsive, Complejidad y Estética
+
+El diseño del sitio está cuidadosamente elaborado para ser completamente responsive, adaptándose a una variedad de dispositivos y tamaños de pantalla, intentando garantizar una experiencia de usuario fluida y estéticamente agradable.
+
+## Diseño Responsive
+
+He implementado múltiples técnicas de diseño responsive utilizando CSS y SCSS, destacando las siguientes características:
+
+### Menú de Hamburguesa en Resoluciones Bajas
+
+En dispositivos con pantallas estrechas (menos de 768px de ancho), el menú de navegación se transforma en un menú de hamburguesa que los usuarios pueden expandir y contraer:
+
+```scss
+@media (max-width: 768px) {
+  header {
+    .menu-toggle {
+      display: block; // Se muestra solo en pantallas pequeñas
+      margin-left: auto;
+    }
+
+    nav ul {
+      background-color: $color-black;
+      display: none; // Oculto inicialmente en móviles
+      flex-direction: column; // Alinear elementos del menú verticalmente
+      position: absolute;
+      top: 100%; // Coloca el menú justo debajo del header
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 500;
+    }
+
+    &.open {
+      display: flex; // Mostrar cuando el menú esté activo
+    }
+  }
+}
+```
+
+Para que esto funcioe también se ha utilizado una pequeña función de JavaScript para añadir la funcionalidad de abrir y cerrar el menú cambiando la clase `open` al menú y las clases de los iconos fontawesome del menú hamburguesa de fa-bars (tres líneas horizontales) a fa-times (una X) y viceversa.
+
+```javascript
+  mobileMenu.addEventListener("click", () => {
+    menuList.classList.toggle("open");
+    mobileMenu.innerHTML = menuList.classList.contains("open")
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+```
+
+### Ajuste Dinámico de la Disposición de Contenidos
+
+El contenido se reorganiza dinámicamente basado en la resolución de la pantalla. Por ejemplo, los álbumes recomendados que normalmente aparecen al lado derecho de la pantalla en resoluciones grandes, se mueven hacia abajo en resoluciones menores para mejor la accesibilidad:
+
+```scss
+@media (max-width: 1024px) {
+  .recommended-albums {
+    margin-top: 1rem;
+    width: 100%;
+
+    #recommended-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+  }
+}
+```
+
+## Estética Avanzada y Funcionalidades CSS
+
+### Video de Fondo con Overlay Semitransparente
+
+Implementamos un video de fondo en la página de presentación con un overlay semitransparente, lo que proporciona profundidad visual sin comprometer la legibilidad del texto sobre el video:
+
+```scss
+  .overlay {
+    background: rgba($color-black, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: $color-white;
+    height: 100%;
+    margin: auto;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+
+    &-content {
+      background: rgba($color-black, 0.2);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      margin: auto;
+      overflow: auto;
+      padding: 3rem;
+      text-align: justify;
+      width: 70%;
+    }
+  }
+````
+
+En las páginas de inicio y enlaces se ha utilizado algo similar, con un fondo con una imagen de portada y un overlay semitransparente para mejorar la legibilidad del texto:
+
+```scss
+#home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/portada.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+```
+
+### Uso de Variables y SCSS para la Gestión de Estilos
+
+Utilizamos SCSS para definir variables que ayudan a mantener la consistencia en los estilos a través del sitio, facilitando cambios globales y manteniendo los estilos organizados y fácilmente mantenibles:
+
+```scss
+$color-black: #000;
+$color-blue: #2980b9;;
+$color-dark-blue: #2c3e50;
+$color-dark-grey: #ddd;
+$color-light-grey: #ccc;
+$color-white: #fff;
+```
+
+### Aspect Ratio y Lazy Loading
+
+Las imágenes utilizan `aspect-ratio` para mantener sus proporciones automáticamente, mejorando la experiencia de usuario al evitar saltos visuales mientras las imágenes se cargan, algo que personalmente me molesta mucho cuando estoy navegando por una web.
+
+```scss
+img {
+  aspect-ratio: 1;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+```
+
+Además, implementamos `lazy loading` para optimizar los tiempos de carga y el rendimiento del sitio:
+
+```html
+<img src="../assets/images/logo.png" alt="Logo Marea" class="logo" id="logo" loading="lazy">
+```
+
+Estas técnicas no solo mejoran la estética del sitio, sino que también optimizan la experiencia del usuario en diferentes dispositivos y velocidades de conexión. Hay otras técnicas que se han utilizado para mejorar la estética y la funcionalidad del sitio, como la inclusión de iconos de FontAwesome, pero estas son las más destacadas.
+
