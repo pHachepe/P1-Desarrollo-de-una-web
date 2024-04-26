@@ -3,6 +3,7 @@
 @import "base";
 @import "header";
 
+// Estilos para la página de inicio
 #home {
   align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -17,6 +18,7 @@
   text-align: center;
 }
 
+// Estilos para botones
 .btn {
   background-color: $color-blue;
   border: none;
@@ -26,12 +28,14 @@
   margin-top: 1rem;
   padding: 1rem 2rem;
   text-decoration: none;
+  transition: background-color 0.7s ease;
 
   &:hover {
     background-color: $color-dark-blue;
   }
 }
 
+// Contenedor principal
 .container {
   margin: 0 auto;
   padding: 1rem;
@@ -63,6 +67,7 @@
   margin: 1rem;
 }
 
+// Contenido del álbum
 .album-content {
   align-items: flex-start;
   display: flex;
@@ -81,6 +86,7 @@
   }
 }
 
+// Detalle del álbum
 .album-detail-container {
   background: $color-white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -99,7 +105,7 @@
 .grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .main-content {
@@ -155,15 +161,16 @@
   }
 }
 
+// Lista de canciones
 .song-list {
   padding-top: 1rem;
-
   li {
     margin: auto 1rem;
     padding: 0.5rem 0;
   }
 }
 
+// Álbumes recomendados
 .recommended-albums {
   background: $color-white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -193,6 +200,34 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 100%;
+    }
+  }
+}
+
+.bibliography {
+  a {
+    color: $color-blue;
+    text-decoration: none;
+
+    &:hover {
+      color: #3498db;
+      transition: color 0.7s ease;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      background-color: $color-white;
+      border-radius: 5px;
+      margin: 1em auto;
+      padding: 1em;
+
+      &:hover {
+        background-color: $color-light-grey;
+        transition: background-color 0.7s ease;
+      }
     }
   }
 }
