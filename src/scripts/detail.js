@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function loadRecommendedAlbums(currentAlbumId) {
+const loadRecommendedAlbums = (currentAlbumId) => {
   const recommendedContainer = document.getElementById("recommended-list");
   const filteredAlbums = albums.filter((album) => album.id !== currentAlbumId);
   const recommendedAlbums = filteredAlbums

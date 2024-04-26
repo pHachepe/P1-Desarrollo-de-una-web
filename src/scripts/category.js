@@ -1,6 +1,6 @@
 import { albums } from "../data/albumsData.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("album-links");
   albums.forEach((album) => {
     const card = document.createElement("div");
