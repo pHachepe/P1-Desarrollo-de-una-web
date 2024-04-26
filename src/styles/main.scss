@@ -65,15 +65,8 @@ main {
   align-items: center;
 }
 
-li,
-footer {
-  a {
-    color: $color-white;
-  }
-}
-
 a {
-  color: $color-black;
+  color: $color-white;
   text-decoration: none;
   font-weight: bold;
 
