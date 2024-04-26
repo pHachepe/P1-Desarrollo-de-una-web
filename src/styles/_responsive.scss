@@ -1,0 +1,87 @@
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .menu-toggle {
+      display: block; // Se muestra solo en pantallas pequeñas
+      margin-left: auto;
+    }
+
+    nav ul {
+      background-color: $color-black;
+      display: none; // Oculto inicialmente en móviles
+      flex-direction: column;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 100%; // Coloca el menú justo debajo del header
+      width: 100%;
+      z-index: 500; // Menor que el botón para que no lo tape
+
+      li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+
+        a {
+          display: block;
+          padding: 0.5rem;
+        }
+      }
+
+      &.open {
+        display: flex; // Mostrar cuando el menú esté activo
+      }
+    }
+  }
+
+  .album-content {
+    flex-direction: column;
+  }
+
+  .album-description {
+    width: 100%;
+  }
+
+  .album-image {
+    margin-bottom: 1rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .album-detail-container {
+    margin-right: 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .recommended-albums {
+    margin-top: 1rem;
+    width: 100%;
+
+    #recommended-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .album-card {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding-right: 1rem;
+      width: 300px;
+    }
+  }
+}
