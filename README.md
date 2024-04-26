@@ -50,11 +50,10 @@ PEC1
         └── main.scss
 ```
 
-Inicializamos Node.js y Git en nuestro proyecto para preparar el entorno de desarrollo:
+Inicializamos Node.js en nuestro proyecto para preparar el entorno de desarrollo:
 
 ```bash
 npm init -y
-git init
 ```
 
 Instalamos Parcel como dependencia de desarrollo:
@@ -66,14 +65,6 @@ npm install parcel --save-dev
 Eliminamos main de package.json porque interfiere con parcel:
 ```json
   "main": "index.js",
-```
-
-Creamos un `.gitignore` para evitar subir directorios y archivos no necesarios al repositorio:
-
-```
-node_modules
-dist
-.parcel-cache
 ```
 
 ## Configuración de Scripts en `package.json`
@@ -93,7 +84,7 @@ Configuramos los siguientes scripts en Parcel para simplificar las tareas de des
 
 ## Soporte para Navegadores Antiguos
 
-Utilizamos el campo `browserslist` en el `package.json` para definir qué versiones de navegadores queremos soportar. Esto es crucial para asegurar que nuestro sitio funcione correctamente en navegadores tanto modernos como antiguos.
+Utilizamos el campo `browserslist` en el `package.json` para definir qué versiones de navegadores queremos soportar. Esto es muy importante para asegurar que nuestro sitio funcione correctamente en navegadores tanto modernos como antiguos.
 
 ```
 "browserslist": "> 0.5%, last 2 versions, not dead"
@@ -145,3 +136,44 @@ Esta configuración inicial establece las bases para la creación de un boilerpl
     <i class="fab fa-github"></i>
     ```
   - **Impacto en Producción**: Los iconos se cargan de manera eficiente usando fuentes o SVG, lo que mejora la estética del sitio sin comprometer la velocidad de carga.
+
+# 3. Creación del Repositorio Git
+
+## Inicialización de Git y Configuración de `.gitignore`
+
+Para gestionar el versionado y colaboración en nuestro proyecto (aunque en este caso sea individual), inicializamos un repositorio Git en la raíz del mismo.
+
+```bash
+git init
+```
+
+Después de inicializar el repositorio, creamos y configuramos un archivo `.gitignore` para evitar que archivos no deseados o sensibles se suban al repositorio.
+El archivo `.gitignore` incluye:
+
+```
+node_modules/
+dist/
+.parcel-cache/
+.DS_Store
+```
+
+- **node_modules/**: Contiene las dependencias de npm, se puede restaurar con `npm install` y no es necesario en el repositorio.
+- **dist/**: Directorio de construcción para la versión de producción, específico para cada build y no incluido en el repositorio.
+- **.parcel-cache/**: Caché de Parcel que acelera las reconstrucciones, no debe versionarse.
+- **.DS_Store**: Archivos ocultos de macOS que no son relevantes para el proyecto.
+
+## Creación del Repositorio Remoto en GitHub
+
+Para facilitar la colaboración y el seguimiento de cambios, creamos un repositorio remoto en GitHub y lo vinculamos con el repositorio local.
+
+```bash
+git remote add origin https://github.com/pHachepe/P1-Desarrollo-de-una-web.git
+```
+
+## Comandos Básicos de Git para la Gestión del Proyecto
+
+Los comandos más básicos de Git utilizados para la gestión del proyecto son:
+
+- **git add .** - Prepara los cambios actuales para el siguiente commit.
+- **git commit -m "Descripción de los cambios"** - Guarda una instantánea de los cambios con un mensaje autoexplicativo de los cambios realizados.
+- **git push** - Envía los cambios al repositorio remoto, actualizando el proyecto alojado en GitHub.
