@@ -287,7 +287,7 @@ El contenido se reorganiza dinámicamente basado en la resolución de la pantall
 
 ### Video de Fondo con Overlay Semitransparente
 
-Implementamos un video de fondo en la página de presentación con un overlay semitransparente, lo que proporciona profundidad visual sin comprometer la legibilidad del texto sobre el video:
+Implementé un video de fondo en la página de presentación con un overlay semitransparente, lo que proporciona profundidad visual sin comprometer la legibilidad del texto sobre el video:
 
 ```scss
   .overlay {
@@ -329,7 +329,7 @@ En las páginas de inicio y enlaces se ha utilizado algo similar, con un fondo c
 
 ### Uso de Variables y SCSS para la Gestión de Estilos
 
-Utilizamos SCSS para definir variables que ayudan a mantener la consistencia en los estilos a través del sitio, facilitando cambios globales y manteniendo los estilos organizados y fácilmente mantenibles:
+Creé un archivo de SCSS para definir variables que ayudan a mantener la consistencia en los estilos a través del sitio, facilitando cambios globales y manteniendo los estilos organizados y fácilmente mantenibles:
 
 ```scss
 $color-black: #000;
@@ -353,7 +353,7 @@ img {
 }
 ```
 
-Además, implementamos `lazy loading` para optimizar los tiempos de carga y el rendimiento del sitio:
+Además, les puse el atributo `lazy loading` para optimizar los tiempos de carga y el rendimiento del sitio:
 
 ```html
 <img src="../assets/images/logo.png" alt="Logo Marea" class="logo" id="logo" loading="lazy">
@@ -361,3 +361,75 @@ Además, implementamos `lazy loading` para optimizar los tiempos de carga y el r
 
 Estas técnicas no solo mejoran la estética del sitio, sino que también optimizan la experiencia del usuario en diferentes dispositivos y velocidades de conexión. Hay otras técnicas que se han utilizado para mejorar la estética y la funcionalidad del sitio, como la inclusión de iconos de FontAwesome, pero estas son las más destacadas.
 
+# 6. Semántica y Accesibilidad
+
+El enfoque en la semántica y accesibilidad es básico para garantizar que el sitio web sea usable y accesible para todos los usuarios, incluyendo aquellos con discapacidades. Además también mejora el SEO del sitio permitiendo a los motores de búsqueda entender mejor el contenido de la página. En otra asignatura de este máster, `HTML y CSS`, hemos profundizado mucho en estos aspectos.
+
+## Uso de Etiquetas Semánticas HTML
+
+He utilizado etiquetas HTML semánticas que ayudan a describir el significado del contenido de la página web de manera más precisa que solo con divs o spans.
+Estas etiquetas incluyen, entre otras:
+
+- `<header>` para las cabeceras de página.
+- `<nav>` para los menús de navegación.
+- `<main>` para el contenido principal.
+- `<section>` para definir secciones.
+- `<article>` para artículos independientes o contenidos relacionados (esta creo que no la he utilizado).
+- `<footer>` para los pies de página.
+
+Dichas etiquetas nos ayudan a estructurar el documento HTML de manera lógica y clara, facilitando la navegación por lectores de pantalla y otros asistentes tecnológicos.
+
+## Características de Accesibilidad Implementadas
+
+### Atributos Alt en Imágenes
+
+Cada imagen incluye un atributo `alt` descriptivo que proporciona una descripción clara de la imagen para asistencia tecnológica, crucial para usuarios con discapacidades visuales, además de permitir a los motores de búsqueda indexar y clasificar las imágenes correctamente:
+
+```html
+<img src="logo.png" alt="Logo de Marea">
+```
+
+### Diseño Responsive
+
+El diseño responsive asegura que el sitio sea accesible en dispositivos móviles y tablets, no solo en ordenadores de sobremesa.
+Por ejemplo, el menú de hamburguesa permite a los usuarios de dispositivos móviles navegar por el sitio de forma cómoda y sencilla.
+
+### Lazy Loading de Imágenes
+
+El lazy loading mejora la accesibilidad al reducir el tiempo de carga de la página, lo que es especialmente útil para usuarios con conexiones lentas a internet:
+
+```html
+<img src="album-cover.jpg" loading="lazy" alt="Portada del álbum">
+```
+
+## Mejoras de Accesibilidad
+
+Además de estas implementaciones, para asegurar que todos los elementos sean accesibles, podríamos proporcionar roles y etiquetas ARIA donde sea necesario para mejorar la accesibilidad del contenido dinámico y los controles de interfaz, pero considero que queda fuera del alcance de esta práctica.
+
+# 7. Publicación a internet
+
+Aunque en los módulos se explicaba cómo desplegar la web en Netlify, he optado por desplegarla en Vercel, ya que es la plataforma que he utilizado en otros proyectos y me resulta más cómoda y sencilla de utilizar.
+Vercel es una plataforma de desarrollo web que permite desplegar aplicaciones web de forma sencilla y rápida, con integración con GitHub, de forma que cada vez que se subimos un push a la rama principal del repositorio en GitHub, se despliega automáticamente la web en Vercel.
+
+## Despliegue en Vercel
+
+> [!IMPORTANT]
+> Damos por hecho que el repositorio ya está subido a GitHub y que tenemos una cuenta en Vercel.
+
+### Configuración de Vercel
+Para desplegar la web en Vercel, simplemente hay que seguir los siguientes pasos:
+
+1. Acceder a la página de [Vercel](https://vercel.com/) e iniciar sesión con nuestra cuenta.
+2. Hacer clic en el desplegable "Add New..." en la esquina superior derecha y seleccionar "Project".
+3. Nos pedirá que le demos permisos para acceder a nuestra cuenta de GitHub, le damos los permisos necesarios, bien sobre toda la cuenta o bien solo sobre el repositorio concreto que queremos desplegar en la web.
+  ![Selección de repositorios y permisos](src/assets/images/deployment/01-select-repos-access.png)
+4. Una vez demos permisos, nos aparecerá una lista con todos los repositorios de GitHub sobre los que hayamos dado permisos a Vercel, seleccionamos el que queremos desplegar y hacemos clic en "Import".
+  ![Importación del repositorio en Vercel](src/assets/images/deployment/02-import-github-repo-in-vercel.png)
+5. Nos aparecerá una pantalla de configuración del proyecto, donde podremos darle un nombre, seleccionar el framework que estamos utilizando (suele detectarlo automáticamente correctamente), seleccionar la ruta raíz del proyecto, definir las variables de entorno, configurar opciones de construcción, y otras opciones avanzadas. En nuestro caso, simplemente dejamos la configuración por defecto, le damos un nombre y hacemos clic en "Deploy".
+  ![Configuración del proyecto](src/assets/images/deployment/03-configure-project.png)
+6. Esperamos a que Vercel compile y despliegue la web, al ser una web tan sencilla, el proceso suele ser muy rápido, en unos segundos ya tendremos la web desplegada y accesible a través de la URL que nos proporciona Vercel.
+  ![Esperando a que se compile y despliegue la web](src/assets/images/deployment/04-waiting-deployment.png)
+7. Una vez desplegada, Vercel nos proporcionará la URL pública de la web, que podremos compartir y acceder a ella en cualquier momento.
+  ![Enhorabuena, la web ha sido desplegada](src/assets/images/deployment/05-congrats-deployed.png)
+8. Se puede visitar la web desplegada en: https://homenaje-marea.vercel.app
+9. Cada vez que hagamos un push a la rama principal del repositorio en GitHub, Vercel detectará los cambios y en pocos segundos desplegará automáticamente la web con las últimas actualizaciones.
