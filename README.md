@@ -7,6 +7,52 @@ Este documento explica detalladamente cada paso realizado en el desarrollo del p
 - **Repositorio del código:** [GitHub - P1-Desarrollo-de-una-web](https://github.com/pHachepe/P1-Desarrollo-de-una-web)
 - **URL pública de la web:** [Homenaje a Marea](https://homenaje-marea.vercel.app)
 
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
+## Índice
+- [Documentación del Proyecto: Homenaje a Marea](#documentación-del-proyecto-homenaje-a-marea)
+  - [Enlaces Importantes](#enlaces-importantes)
+  - [Índice](#índice)
+- [1. Creación del Boilerplate Basado en Parcel](#1-creación-del-boilerplate-basado-en-parcel)
+  - [Configuración Inicial del Proyecto](#configuración-inicial-del-proyecto)
+  - [Configuración de Scripts en `package.json`](#configuración-de-scripts-en-packagejson)
+  - [Soporte para Navegadores Antiguos](#soporte-para-navegadores-antiguos)
+- [2. Gestión de Dependencias: Pre- o Postprocesadores y Dependencias Adicionales](#2-gestión-de-dependencias-pre--o-postprocesadores-y-dependencias-adicionales)
+  - [Dependencias Internas Utilizadas](#dependencias-internas-utilizadas)
+  - [Dependencia Externa: FontAwesome](#dependencia-externa-fontawesome)
+- [3. Creación del Repositorio Git](#3-creación-del-repositorio-git)
+  - [Inicialización de Git y Configuración de `.gitignore`](#inicialización-de-git-y-configuración-de-gitignore)
+  - [Creación del Repositorio Remoto en GitHub](#creación-del-repositorio-remoto-en-github)
+  - [Comandos Básicos de Git para la Gestión del Proyecto](#comandos-básicos-de-git-para-la-gestión-del-proyecto)
+- [4. Adecuación a la Temática y Estructura de la Práctica](#4-adecuación-a-la-temática-y-estructura-de-la-práctica)
+  - [Temática del Sitio](#temática-del-sitio)
+  - [Estructura del Sitio](#estructura-del-sitio)
+  - [Adaptación a la Práctica](#adaptación-a-la-práctica)
+- [5. Diseño Responsive, Complejidad y Estética](#5-diseño-responsive-complejidad-y-estética)
+  - [Diseño Responsive](#diseño-responsive)
+    - [Menú de Hamburguesa en Resoluciones Bajas](#menú-de-hamburguesa-en-resoluciones-bajas)
+    - [Ajuste Dinámico de la Disposición de Contenidos](#ajuste-dinámico-de-la-disposición-de-contenidos)
+  - [Estética Avanzada y Funcionalidades CSS](#estética-avanzada-y-funcionalidades-css)
+    - [Video de Fondo con Overlay Semitransparente](#video-de-fondo-con-overlay-semitransparente)
+    - [Uso de Variables y SCSS para la Gestión de Estilos](#uso-de-variables-y-scss-para-la-gestión-de-estilos)
+    - [Aspect Ratio y Lazy Loading](#aspect-ratio-y-lazy-loading)
+- [6. Semántica y Accesibilidad](#6-semántica-y-accesibilidad)
+  - [Uso de Etiquetas Semánticas HTML](#uso-de-etiquetas-semánticas-html)
+  - [Características de Accesibilidad Implementadas](#características-de-accesibilidad-implementadas)
+    - [Atributos Alt en Imágenes](#atributos-alt-en-imágenes)
+    - [Diseño Responsive](#diseño-responsive-1)
+    - [Lazy Loading de Imágenes](#lazy-loading-de-imágenes)
+  - [Mejoras de Accesibilidad](#mejoras-de-accesibilidad)
+- [7. Publicación a internet](#7-publicación-a-internet)
+  - [Despliegue en Vercel](#despliegue-en-vercel)
+    - [Configuración de Vercel](#configuración-de-vercel)
+
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 # 1. Creación del Boilerplate Basado en Parcel
 
 ## Configuración Inicial del Proyecto
