@@ -14,7 +14,7 @@
   <div class="content-wrapper">
     <main class="album-detail-container">
       <h2 id="album-title" class="album-title">Cargando...</h2>
-      <div class="album-content">
+      <div class="album-content" tabindex="-1">
         <div class="album-image-container">
           <img id="album-cover" alt="Cargando..." class="album-image" />
         </div>
@@ -26,9 +26,9 @@
       </div>
     </main>
 
-    <aside class="recommended-albums">
-      <h3>Discos Recomendados</h3>
-      <div id="recommended-list"></div>
+    <aside class="recommended-albums" aria-labelledby="recommended-title">
+      <h3 id="recommended-title">Discos Recomendados</h3>
+      <div id="recommended-list" tabindex="2"></div>
     </aside>
   </div>
 

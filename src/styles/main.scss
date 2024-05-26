@@ -59,6 +59,12 @@
   &:hover {
     background-color: $color-dark-blue;
   }
+
+  &:focus {
+    outline: 2px solid $color-light-blue;
+    outline-offset: 4px;
+    box-shadow: 0 0 0 3px rgba($color-light-blue, 0.5);
+  }
 }
 
 // Contenedor principal
