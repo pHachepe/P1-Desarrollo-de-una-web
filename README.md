@@ -179,7 +179,7 @@ Esta configuración inicial establece las bases para la creación de un boilerpl
   - **Instalación**: Se puede instalar a través de npm ejecutando `npm install @fortawesome/fontawesome-free --save`.
   - **Configuración**: Después de instalar FontAwesome, los iconos pueden ser agregados a cualquier archivo HTML o CSS simplemente referenciando las clases proporcionadas por FontAwesome. Por ejemplo, para agregar un icono del logo de GitHub:
     ```html
-    <i class="fab fa-github"></i>
+    <span class="fab fa-github"></span>
     ```
   - **Impacto en Producción**: Los iconos se cargan de manera eficiente usando fuentes o SVG, lo que mejora la estética del sitio sin comprometer la velocidad de carga.
 
@@ -305,8 +305,8 @@ Para que esto funcioe también se ha utilizado una pequeña función de JavaScri
   mobileMenu.addEventListener("click", () => {
     menuList.classList.toggle("open");
     mobileMenu.innerHTML = menuList.classList.contains("open")
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
+      ? '<span class="fas fa-times"></span>'
+      : '<span class="fas fa-bars"></span>';
   });
 ```
 
