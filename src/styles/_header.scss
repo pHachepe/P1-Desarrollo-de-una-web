@@ -1,3 +1,14 @@
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 header {
   align-items: center;
   background-color: $color-black;
@@ -10,29 +21,44 @@ header {
   nav {
     align-items: center;
     display: flex;
+
     ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideInFromLeft 0.5s ease-out forwards;
+    }
 
-      li {
-        margin-right: 1rem;
-      }
+    &.open ul {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    li {
+      margin-right: 1rem;
     }
   }
 
   .logo-container {
     display: flex;
     align-items: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
     .logo {
-      aspect-ratio: 1;
+      width: 100px;
+      height: auto;
+      aspect-ratio: 1 / 1;
       cursor: pointer;
-      max-width: 156px;
     }
 
     .title {
       font-family: "Rock Salt", cursive;
+      margin-left: 1rem;
     }
   }
 
