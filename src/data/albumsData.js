@@ -1,19 +1,53 @@
-import laPateraImage from "../assets/images/albums/01-la-patera-670x670.jpg";
-import revolconImage from "../assets/images/albums/02-revolcon-670x670.jpg";
-import punaladasImage from "../assets/images/albums/03-28000-punaladas-670x670.jpg";
-import besosDePerroImage from "../assets/images/albums/04-besos-de-perro-670x670.jpg";
-import acerasImage from "../assets/images/albums/05-las-aceras-estan-llenas-de-piojos-1-670x670.jpg";
-import jauriaImage from "../assets/images/albums/06-jauria-de-perros-verdes-670x670.jpg";
-import viejasImage from "../assets/images/albums/07-las-putas-mas-viejas-del-mundo-670x670.jpg";
-import hambreImage from "../assets/images/albums/08-en-mi-hambre-mando-yo-670x670.jpg";
-import azogueImage from "../assets/images/albums/09-el-azogue-670x670.jpg";
-import potrosImage from "../assets/images/albums/10-los-potros-del-tiempo-670x670.jpg";
+import laPateraImageSmall from "../assets/images/albums/small/01-la-patera-small.jpg";
+import laPateraImageMedium from "../assets/images/albums/medium/01-la-patera-medium.jpg";
+import laPateraImageLarge from "../assets/images/albums/large/01-la-patera-large.jpg";
+
+import revolconImageSmall from "../assets/images/albums/small/02-revolcon-small.jpg";
+import revolconImageMedium from "../assets/images/albums/medium/02-revolcon-medium.jpg";
+import revolconImageLarge from "../assets/images/albums/large/02-revolcon-large.jpg";
+
+import punaladasImageSmall from "../assets/images/albums/small/03-28000-punaladas-small.jpg";
+import punaladasImageMedium from "../assets/images/albums/medium/03-28000-punaladas-medium.jpg";
+import punaladasImageLarge from "../assets/images/albums/large/03-28000-punaladas-large.jpg";
+
+import besosDePerroImageSmall from "../assets/images/albums/small/04-besos-de-perro-small.jpg";
+import besosDePerroImageMedium from "../assets/images/albums/medium/04-besos-de-perro-medium.jpg";
+import besosDePerroImageLarge from "../assets/images/albums/large/04-besos-de-perro-large.jpg";
+
+import acerasImageSmall from "../assets/images/albums/small/05-las-aceras-estan-llenas-de-piojos-small.jpg";
+import acerasImageMedium from "../assets/images/albums/medium/05-las-aceras-estan-llenas-de-piojos-medium.jpg";
+import acerasImageLarge from "../assets/images/albums/large/05-las-aceras-estan-llenas-de-piojos-large.jpg";
+
+import jauriaImageSmall from "../assets/images/albums/small/06-jauria-de-perros-verdes-small.jpg";
+import jauriaImageMedium from "../assets/images/albums/medium/06-jauria-de-perros-verdes-medium.jpg";
+import jauriaImageLarge from "../assets/images/albums/large/06-jauria-de-perros-verdes-large.jpg";
+
+import viejasImageSmall from "../assets/images/albums/small/07-las-putas-mas-viejas-del-mundo-small.jpg";
+import viejasImageMedium from "../assets/images/albums/medium/07-las-putas-mas-viejas-del-mundo-medium.jpg";
+import viejasImageLarge from "../assets/images/albums/large/07-las-putas-mas-viejas-del-mundo-large.jpg";
+
+import hambreImageSmall from "../assets/images/albums/small/08-en-mi-hambre-mando-yo-small.jpg";
+import hambreImageMedium from "../assets/images/albums/medium/08-en-mi-hambre-mando-yo-medium.jpg";
+import hambreImageLarge from "../assets/images/albums/large/08-en-mi-hambre-mando-yo-large.jpg";
+
+import azogueImageSmall from "../assets/images/albums/small/09-el-azogue-small.jpg";
+import azogueImageMedium from "../assets/images/albums/medium/09-el-azogue-medium.jpg";
+import azogueImageLarge from "../assets/images/albums/large/09-el-azogue-large.jpg";
+
+import potrosImageSmall from "../assets/images/albums/small/10-los-potros-del-tiempo-small.jpg";
+import potrosImageMedium from "../assets/images/albums/medium/10-los-potros-del-tiempo-medium.jpg";
+import potrosImageLarge from "../assets/images/albums/large/10-los-potros-del-tiempo-large.jpg";
+
 
 export const albums = [
   {
     id: 1,
     title: "La Patera",
-    image: laPateraImage,
+    images: {
+      small: laPateraImageSmall,
+      medium: laPateraImageMedium,
+      large: laPateraImageLarge,
+    },
     shortDescription:
       "El álbum debut que marcó un antes y un después en la escena del rock español.",
     longDescription:
@@ -32,7 +66,11 @@ export const albums = [
   {
     id: 2,
     title: "Revolcón",
-    image: revolconImage,
+    images: {
+      small: revolconImageSmall,
+      medium: revolconImageMedium,
+      large: revolconImageLarge,
+    },
     shortDescription:
       "El segundo álbum de Marea, con riffs más duros y letras comprometidas.",
     longDescription:
@@ -54,7 +92,11 @@ export const albums = [
   {
     id: 3,
     title: "28.000 Puñaladas",
-    image: punaladasImage,
+    images: {
+      small: punaladasImageSmall,
+      medium: punaladasImageMedium,
+      large: punaladasImageLarge,
+    },
     shortDescription:
       "Una intensa exploración de emociones en el tercer álbum de Marea.",
     longDescription:
@@ -76,7 +118,11 @@ export const albums = [
   {
     id: 4,
     title: "Besos de Perro",
-    image: besosDePerroImage,
+    images: {
+      small: besosDePerroImageSmall,
+      medium: besosDePerroImageMedium,
+      large: besosDePerroImageLarge,
+    },
     shortDescription:
       "Un álbum que explora nuevos horizontes musicales manteniendo la esencia de Marea.",
     longDescription:
@@ -98,7 +144,11 @@ export const albums = [
   {
     id: 5,
     title: "Las Aceras Están Llenas de Piojos",
-    image: acerasImage,
+    images: {
+      small: acerasImageSmall,
+      medium: acerasImageMedium,
+      large: acerasImageLarge,
+    },
     shortDescription:
       "Un álbum crítico que refleja la realidad social con la poesía única de Marea.",
     longDescription:
@@ -120,7 +170,11 @@ export const albums = [
   {
     id: 6,
     title: "La Jauría de Perros Verdes",
-    image: jauriaImage,
+    images: {
+      small: jauriaImageSmall,
+      medium: jauriaImageMedium,
+      large: jauriaImageLarge,
+    },
     shortDescription:
       "Marea regresa a sus raíces con un álbum lleno de energía y crítica social.",
     longDescription:
@@ -146,7 +200,11 @@ export const albums = [
   {
     id: 7,
     title: "Las Putas Más Viejas del Mundo",
-    image: viejasImage,
+    images: {
+      small: viejasImageSmall,
+      medium: viejasImageMedium,
+      large: viejasImageLarge,
+    },
     shortDescription:
       "Un título provocador para un álbum que desafía los límites del rock en español.",
     longDescription:
@@ -167,7 +225,11 @@ export const albums = [
   {
     id: 8,
     title: "En Mi Hambre Mando Yo",
-    image: hambreImage,
+    images: {
+      small: hambreImageSmall,
+      medium: hambreImageMedium,
+      large: hambreImageLarge,
+    },
     shortDescription:
       "Un álbum que refleja una madurez musical con fuertes raíces en el rock español.",
     longDescription:
@@ -188,7 +250,11 @@ export const albums = [
   {
     id: 9,
     title: "El Azogue",
-    image: azogueImage,
+    images: {
+      small: azogueImageSmall,
+      medium: azogueImageMedium,
+      large: azogueImageLarge,
+    },
     shortDescription:
       "El último trabajo de Marea, un reflejo de su madurez y maestría musical.",
     longDescription:
@@ -209,7 +275,11 @@ export const albums = [
   {
     id: 10,
     title: "Los Potros del Tiempo",
-    image: potrosImage,
+    images: {
+      small: potrosImageSmall,
+      medium: potrosImageMedium,
+      large: potrosImageLarge,
+    },
     shortDescription:
       "Exploración profunda de la madurez musical y lírica de Marea.",
     longDescription:
