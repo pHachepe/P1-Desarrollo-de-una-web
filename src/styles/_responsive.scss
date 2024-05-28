@@ -33,18 +33,27 @@
     }
   }
 
-  .album-content {
-    flex-direction: column;
-  }
-
   .album-description {
     width: 100%;
+  }
+
+  .album-content {
+    flex-direction: column;
+
+    .album-image-container {
+      min-width: 100%;
+    }
   }
 
   .album-image {
     margin-bottom: 1rem;
     margin-right: 0;
     width: 100%;
+  }
+
+  .song-list {
+    flex: 1;
+    padding-top: 0.5rem;
   }
 
   .grid {

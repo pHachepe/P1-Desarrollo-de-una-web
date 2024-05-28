@@ -103,17 +103,25 @@
 .album-content {
   align-items: flex-start;
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  justify-content: center;
+  align-items: flex-start;
 
   .album-image-container {
     position: relative;
     width: 100%;
+    max-width: 50%;
+    text-align: center;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
 
     .album-image {
       border-radius: 10px;
+      width: 100%;
       height: auto;
-      margin-right: 1rem;
+      margin: 1rem 0;
     }
   }
 }
@@ -123,7 +131,7 @@
   background: $color-white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-right: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 .album-info {
@@ -195,11 +203,19 @@
 
 // Lista de canciones
 .song-list {
-  padding-top: 1rem;
+  flex: 1;
+  padding-top: 4rem;
+  padding-left: 2rem;
+
   li {
     margin: auto 1rem;
     padding: 0.5rem 0;
   }
+}
+
+.album-description {
+  margin-top: 1rem;
+  text-align: justify;
 }
 
 // Álbumes recomendados
