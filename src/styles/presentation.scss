@@ -24,15 +24,6 @@
   stroke-width: 2;
 }
 
-@keyframes moverNota {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .partitura {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
