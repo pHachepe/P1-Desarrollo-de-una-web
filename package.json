@@ -10,7 +10,7 @@
     "parcel:dev": "parcel serve src/pages/*.html --open",
     "parcel:build": "parcel build src/pages/*.html --dist-dir dist --public-url ./",
     "clean": "rimraf dist .parcel-cache",
-    "predeploy": "npm run build",
+    "predeploy": "parcel build index.html --public-url ./",
     "deploy": "gh-pages -d dist"
   },
   "author": "",
