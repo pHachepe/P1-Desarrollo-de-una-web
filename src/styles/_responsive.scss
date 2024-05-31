@@ -3,6 +3,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  #home .clip-path-container {
+    // En pantallas pequeñas, ocultar el clip-path de la estrella
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
