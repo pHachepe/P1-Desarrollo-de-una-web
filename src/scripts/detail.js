@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (album.images) {
       const pictureElement = `
           <picture>
-            <source media="(max-width: 167px)" srcset="${album.images.small}">
-            <source media="(min-width: 168px) and (max-width: 334px)" srcset="${album.images.medium}">
-            <source media="(min-width: 335px)" srcset="${album.images.large}">
+            <source media="(max-width: 320px)" srcset="${album.images.small}">
+            <source media="(min-width: 321px) and (max-width: 767px)" srcset="${album.images.medium}">
+            <source media="(min-width: 768px)" srcset="${album.images.large}">
             <img src="${album.images.original}" alt="Portada del disco ${album.title}" class="album-image">
           </picture>
         `;
