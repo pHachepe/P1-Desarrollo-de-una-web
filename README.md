@@ -367,7 +367,7 @@ En las páginas de inicio y enlaces se ha utilizado algo similar, con un fondo c
 
 ```scss
 #home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/portada.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/images/portada.webp");
   background-size: cover;
   background-position: center;
 }
