@@ -1,24 +1,58 @@
-<header>
-  <img src="../assets/images/logo.png" alt="Logo Marea" class="logo" id="logo" loading="lazy" />
+<header aria-label="Cabecera de la web" id="header">
+  <a href="index.html" class="logo-container">
+    <img
+      srcset="
+        ../assets/images/logo/logo-80.webp      80w,
+        ../assets/images/logo/logo-80@2x.webp  160w,
+        ../assets/images/logo/logo-120.webp    120w,
+        ../assets/images/logo/logo-120@2x.webp 240w,
+        ../assets/images/logo/logo-150.webp    150w,
+        ../assets/images/logo/logo-150@2x.webp 300w
+      "
+      sizes="
+      (max-width: 767px) 80px,
+      (min-width: 768px) and (max-width: 1023px) 120px,
+      (min-width: 1024px) 150px
+      "
+      src="../assets/images/logo/logo-120.webp"
+      alt="Logo Marea"
+      class="logo"
+      id="logo"
+      loading="lazy"
+    />
+    <h1 class="title">Web No Oficial</h1>
+  </a>
 
   <!-- Botón de menú hamburguesa -->
-  <button class="menu-toggle" id="mobile-menu">
-    <i class="fas fa-bars"></i>
+  <button
+    class="menu-toggle"
+    id="mobile-menu"
+    aria-label="Abrir menú de navegación"
+  >
+    <span class="fas fa-bars"></span>
   </button>
 
-  <nav>
+  <nav aria-label="Menú de navegación principal" id="menu">
     <ul id="menu-list">
-      <li>
-        <a href="../pages/index.html"><i class="fas fa-home"></i> Inicio</a>
+      <li style="--i: 1">
+        <a href="../pages/index.html"
+          ><span class="fas fa-home"></span> Inicio</a
+        >
       </li>
-      <li>
-        <a href="../pages/category.html"><i class="fas fa-compact-disc"></i> Discografía</a>
+      <li style="--i: 2">
+        <a href="../pages/category.html"
+          ><span class="fas fa-compact-disc"></span> Discografía</a
+        >
       </li>
-      <li>
-        <a href="../pages/presentation.html"><i class="fas fa-microphone"></i>Biografía</a>
+      <li style="--i: 3">
+        <a href="../pages/presentation.html"
+          ><span class="fas fa-microphone"></span> Biografía</a
+        >
       </li>
-      <li>
-        <a href="../pages/links.html"><i class="fas fa-link"></i> Enlaces</a>
+      <li style="--i: 4">
+        <a href="../pages/links.html"
+          ><span class="fas fa-link"></span> Enlaces</a
+        >
       </li>
     </ul>
   </nav>

@@ -1,4 +1,4 @@
-import { albums } from "../data/albumsData.js";
+import { albums } from '../data/albumsData.js';
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
@@ -6,19 +6,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const album = albums.find((album) => album.id == albumId);
 
   if (album) {
-    document.getElementById("album-title").textContent = album.title;
-    document.getElementById("album-cover").src = album.image;
-    document.getElementById(
-      "album-cover"
-    ).alt = `Portada del disco ${album.title}`;
-    document.getElementById("album-description").innerHTML =
+    const albumTitleElement = document.getElementById("album-title");
+    const albumCoverElement = document.getElementById("album-cover");
+    const albumDescriptionElement = document.getElementById("album-description");
+    const songListElement = document.getElementById("songs");
+
+    albumTitleElement.textContent = album.title;
+
+    if (album.images) {
+      const pictureElement = `
+          <picture>
+            <source media="(max-width: 320px)" srcset="${album.images.small}">
+            <source media="(min-width: 321px) and (max-width: 767px)" srcset="${album.images.medium}">
+            <source media="(min-width: 768px)" srcset="${album.images.large}">
+            <img src="${album.images.original}" alt="Portada del disco ${album.title}" class="album-image">
+          </picture>
+        `;
+      albumCoverElement.outerHTML = pictureElement;
+    } else {
+      albumCoverElement.src = album.image;
+      albumCoverElement.alt = `Portada del disco ${album.title}`;
+    }
+
+    albumDescriptionElement.innerHTML =
       album.longDescription
         .split("\n")
         .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
 
-    const songList = document.getElementById("songs");
-    songList.innerHTML = album.songs.map((song) => `<li>${song}</li>`).join("");
+    songListElement.innerHTML = album.songs.map((song) => `<li>${song}</li>`).join("");
 
     loadRecommendedAlbums(album.id);
   } else {
@@ -37,7 +53,7 @@ const loadRecommendedAlbums = (currentAlbumId) => {
     const albumCard = document.createElement("div");
     albumCard.className = "album-card";
     albumCard.innerHTML = `
-      <img src="${album.image}" alt="${album.title}" class="recommended-album-image" loading="lazy">
+      <img src="${album.images.small}" alt="${album.title}" class="recommended-album-image" loading="lazy">
       <div class="recommended-album-title">${album.title}</div>
     `;
     albumCard.onclick = () =>

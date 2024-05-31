@@ -1,10 +1,60 @@
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-1024.webp") no-repeat center / cover;
+
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-1024.webp") no-repeat
+        center / cover;
+    }
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  .album-detail-container {
+    margin-right: 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .recommended-albums {
+    margin-top: 1rem;
+    width: 100%;
+
+    #recommended-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .album-card {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding-right: 1rem;
+      width: 300px;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-768.webp") no-repeat center / cover;
+
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-768.webp") no-repeat
+        center / cover;
+    }
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
   header {
     .menu-toggle {
       display: block; // Se muestra solo en pantallas pequeñas
@@ -39,12 +89,16 @@
     }
   }
 
-  .album-content {
-    flex-direction: column;
-  }
-
   .album-description {
     width: 100%;
+  }
+
+  .album-content {
+    flex-direction: column;
+
+    .album-image-container {
+      min-width: 100%;
+    }
   }
 
   .album-image {
@@ -53,35 +107,47 @@
     width: 100%;
   }
 
+  .song-list {
+    flex: 1;
+    padding-top: 1.5rem;
+    padding-left: 0;
+  }
+
   .grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .footer-nav ul li a i {
+    margin-right: 0.5rem;
   }
 }
 
-@media (max-width: 1024px) {
-  .album-detail-container {
-    margin-right: 0;
+@media (max-width: 420px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-420.webp") no-repeat center / cover;
+
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-420.webp") no-repeat
+        center / cover;
+    }
   }
 
-  .content-wrapper {
-    flex-direction: column;
+  .logo {
+    max-width: 80px;
   }
 
-  .recommended-albums {
-    margin-top: 1rem;
-    width: 100%;
-
-    #recommended-list {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .album-card {
-      display: inline-block;
-      flex: 0 0 auto;
-      padding-right: 1rem;
-      width: 300px;
-    }
+  #home .clip-path-container {
+    // En pantallas pequeñas, ocultar el clip-path de la estrella
+    display: none;
   }
 }

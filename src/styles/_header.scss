@@ -10,25 +10,42 @@ header {
   nav {
     align-items: center;
     display: flex;
+
     ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideInFromLeft 0.5s ease-out forwards;
+    }
 
-      li {
-        margin-right: 1rem;
-      }
+    &.open ul {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    li {
+      margin-right: 1rem;
     }
   }
 
-  .logo {
-    aspect-ratio: 228 / 56;
-    cursor: pointer;
-    max-width: 228px;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    height: auto;
+    text-decoration: none;
+
+    .title {
+      font-family: "Rock Salt", cursive;
+      margin-left: 1rem;
+    }
   }
 
   .menu-toggle {
+    min-width: 24px;
     background: none;
     border: none;
     color: $color-white;
