@@ -1,42 +1,52 @@
-import laPateraImageSmall from "../assets/images/albums/small/01-la-patera-small.jpg";
-import laPateraImageMedium from "../assets/images/albums/medium/01-la-patera-medium.jpg";
-import laPateraImageLarge from "../assets/images/albums/large/01-la-patera-large.jpg";
+import laPateraImageOriginal from "../assets/images/albums/original/01-la-patera.jpg";
+import laPateraImageSmall from "../assets/images/albums/small_webp/01-la-patera-small.webp";
+import laPateraImageMedium from "../assets/images/albums/medium_webp/01-la-patera-medium.webp";
+import laPateraImageLarge from "../assets/images/albums/large_webp/01-la-patera-large.webp";
 
-import revolconImageSmall from "../assets/images/albums/small/02-revolcon-small.jpg";
-import revolconImageMedium from "../assets/images/albums/medium/02-revolcon-medium.jpg";
-import revolconImageLarge from "../assets/images/albums/large/02-revolcon-large.jpg";
+import revolconImageOriginal from "../assets/images/albums/original/02-revolcon.jpg";
+import revolconImageSmall from "../assets/images/albums/small_webp/02-revolcon-small.webp";
+import revolconImageMedium from "../assets/images/albums/medium_webp/02-revolcon-medium.webp";
+import revolconImageLarge from "../assets/images/albums/large_webp/02-revolcon-large.webp";
 
-import punaladasImageSmall from "../assets/images/albums/small/03-28000-punaladas-small.jpg";
-import punaladasImageMedium from "../assets/images/albums/medium/03-28000-punaladas-medium.jpg";
-import punaladasImageLarge from "../assets/images/albums/large/03-28000-punaladas-large.jpg";
+import punaladasImageOriginal from "../assets/images/albums/original/03-28000-punaladas.jpg";
+import punaladasImageSmall from "../assets/images/albums/small_webp/03-28000-punaladas-small.webp";
+import punaladasImageMedium from "../assets/images/albums/medium_webp/03-28000-punaladas-medium.webp";
+import punaladasImageLarge from "../assets/images/albums/large_webp/03-28000-punaladas-large.webp";
 
-import besosDePerroImageSmall from "../assets/images/albums/small/04-besos-de-perro-small.jpg";
-import besosDePerroImageMedium from "../assets/images/albums/medium/04-besos-de-perro-medium.jpg";
-import besosDePerroImageLarge from "../assets/images/albums/large/04-besos-de-perro-large.jpg";
+import besosDePerroImageOriginal from "../assets/images/albums/original/04-besos-de-perro.jpg";
+import besosDePerroImageSmall from "../assets/images/albums/small_webp/04-besos-de-perro-small.webp";
+import besosDePerroImageMedium from "../assets/images/albums/medium_webp/04-besos-de-perro-medium.webp";
+import besosDePerroImageLarge from "../assets/images/albums/large_webp/04-besos-de-perro-large.webp";
 
-import acerasImageSmall from "../assets/images/albums/small/05-las-aceras-estan-llenas-de-piojos-small.jpg";
-import acerasImageMedium from "../assets/images/albums/medium/05-las-aceras-estan-llenas-de-piojos-medium.jpg";
-import acerasImageLarge from "../assets/images/albums/large/05-las-aceras-estan-llenas-de-piojos-large.jpg";
+import acerasImageOriginal from "../assets/images/albums/original/05-las-aceras-estan-llenas-de-piojos.jpg";
+import acerasImageSmall from "../assets/images/albums/small_webp/05-las-aceras-estan-llenas-de-piojos-small.webp";
+import acerasImageMedium from "../assets/images/albums/medium_webp/05-las-aceras-estan-llenas-de-piojos-medium.webp";
+import acerasImageLarge from "../assets/images/albums/large_webp/05-las-aceras-estan-llenas-de-piojos-large.webp";
 
-import jauriaImageSmall from "../assets/images/albums/small/06-jauria-de-perros-verdes-small.jpg";
-import jauriaImageMedium from "../assets/images/albums/medium/06-jauria-de-perros-verdes-medium.jpg";
-import jauriaImageLarge from "../assets/images/albums/large/06-jauria-de-perros-verdes-large.jpg";
+import jauriaImageOriginal from "../assets/images/albums/original/06-jauria-de-perros-verdes.jpg";
+import jauriaImageSmall from "../assets/images/albums/small_webp/06-jauria-de-perros-verdes-small.webp";
+import jauriaImageMedium from "../assets/images/albums/medium_webp/06-jauria-de-perros-verdes-medium.webp";
+import jauriaImageLarge from "../assets/images/albums/large_webp/06-jauria-de-perros-verdes-large.webp";
 
-import viejasImageSmall from "../assets/images/albums/small/07-las-putas-mas-viejas-del-mundo-small.jpg";
-import viejasImageMedium from "../assets/images/albums/medium/07-las-putas-mas-viejas-del-mundo-medium.jpg";
-import viejasImageLarge from "../assets/images/albums/large/07-las-putas-mas-viejas-del-mundo-large.jpg";
+import viejasImageOriginal from "../assets/images/albums/original/07-las-putas-mas-viejas-del-mundo.jpg";
+import viejasImageSmall from "../assets/images/albums/small_webp/07-las-putas-mas-viejas-del-mundo-small.webp";
+import viejasImageMedium from "../assets/images/albums/medium_webp/07-las-putas-mas-viejas-del-mundo-medium.webp";
+import viejasImageLarge from "../assets/images/albums/large_webp/07-las-putas-mas-viejas-del-mundo-large.webp";
 
-import hambreImageSmall from "../assets/images/albums/small/08-en-mi-hambre-mando-yo-small.jpg";
-import hambreImageMedium from "../assets/images/albums/medium/08-en-mi-hambre-mando-yo-medium.jpg";
-import hambreImageLarge from "../assets/images/albums/large/08-en-mi-hambre-mando-yo-large.jpg";
+import hambreImageOriginal from "../assets/images/albums/original/08-en-mi-hambre-mando-yo.jpg";
+import hambreImageSmall from "../assets/images/albums/small_webp/08-en-mi-hambre-mando-yo-small.webp";
+import hambreImageMedium from "../assets/images/albums/medium_webp/08-en-mi-hambre-mando-yo-medium.webp";
+import hambreImageLarge from "../assets/images/albums/large_webp/08-en-mi-hambre-mando-yo-large.webp";
 
-import azogueImageSmall from "../assets/images/albums/small/09-el-azogue-small.jpg";
-import azogueImageMedium from "../assets/images/albums/medium/09-el-azogue-medium.jpg";
-import azogueImageLarge from "../assets/images/albums/large/09-el-azogue-large.jpg";
+import azogueImageOriginal from "../assets/images/albums/original/09-el-azogue.jpg";
+import azogueImageSmall from "../assets/images/albums/small_webp/09-el-azogue-small.webp";
+import azogueImageMedium from "../assets/images/albums/medium_webp/09-el-azogue-medium.webp";
+import azogueImageLarge from "../assets/images/albums/large_webp/09-el-azogue-large.webp";
 
-import potrosImageSmall from "../assets/images/albums/small/10-los-potros-del-tiempo-small.jpg";
-import potrosImageMedium from "../assets/images/albums/medium/10-los-potros-del-tiempo-medium.jpg";
-import potrosImageLarge from "../assets/images/albums/large/10-los-potros-del-tiempo-large.jpg";
+import potrosImageOriginal from "../assets/images/albums/original/10-los-potros-del-tiempo.jpg";
+import potrosImageSmall from "../assets/images/albums/small_webp/10-los-potros-del-tiempo-small.webp";
+import potrosImageMedium from "../assets/images/albums/medium_webp/10-los-potros-del-tiempo-medium.webp";
+import potrosImageLarge from "../assets/images/albums/large_webp/10-los-potros-del-tiempo-large.webp";
 
 
 export const albums = [
@@ -44,6 +54,7 @@ export const albums = [
     id: 1,
     title: "La Patera",
     images: {
+      original: laPateraImageOriginal,
       small: laPateraImageSmall,
       medium: laPateraImageMedium,
       large: laPateraImageLarge,
@@ -67,6 +78,7 @@ export const albums = [
     id: 2,
     title: "Revolcón",
     images: {
+      original: revolconImageOriginal,
       small: revolconImageSmall,
       medium: revolconImageMedium,
       large: revolconImageLarge,
@@ -93,6 +105,7 @@ export const albums = [
     id: 3,
     title: "28.000 Puñaladas",
     images: {
+      original: punaladasImageOriginal,
       small: punaladasImageSmall,
       medium: punaladasImageMedium,
       large: punaladasImageLarge,
@@ -119,6 +132,7 @@ export const albums = [
     id: 4,
     title: "Besos de Perro",
     images: {
+      original: besosDePerroImageOriginal,
       small: besosDePerroImageSmall,
       medium: besosDePerroImageMedium,
       large: besosDePerroImageLarge,
@@ -145,6 +159,7 @@ export const albums = [
     id: 5,
     title: "Las Aceras Están Llenas de Piojos",
     images: {
+      original: acerasImageOriginal,
       small: acerasImageSmall,
       medium: acerasImageMedium,
       large: acerasImageLarge,
@@ -171,6 +186,7 @@ export const albums = [
     id: 6,
     title: "La Jauría de Perros Verdes",
     images: {
+      original: jauriaImageOriginal,
       small: jauriaImageSmall,
       medium: jauriaImageMedium,
       large: jauriaImageLarge,
@@ -201,6 +217,7 @@ export const albums = [
     id: 7,
     title: "Las Putas Más Viejas del Mundo",
     images: {
+      original: viejasImageOriginal,
       small: viejasImageSmall,
       medium: viejasImageMedium,
       large: viejasImageLarge,
@@ -226,6 +243,7 @@ export const albums = [
     id: 8,
     title: "En Mi Hambre Mando Yo",
     images: {
+      original: hambreImageOriginal,
       small: hambreImageSmall,
       medium: hambreImageMedium,
       large: hambreImageLarge,
@@ -251,6 +269,7 @@ export const albums = [
     id: 9,
     title: "El Azogue",
     images: {
+      original: azogueImageOriginal,
       small: azogueImageSmall,
       medium: azogueImageMedium,
       large: azogueImageLarge,
@@ -276,6 +295,7 @@ export const albums = [
     id: 10,
     title: "Los Potros del Tiempo",
     images: {
+      original: potrosImageOriginal,
       small: potrosImageSmall,
       medium: potrosImageMedium,
       large: potrosImageLarge,

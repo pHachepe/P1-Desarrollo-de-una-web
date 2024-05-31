@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <source media="(max-width: 167px)" srcset="${album.images.small}">
               <source media="(min-width: 168px) and (max-width: 334px)" srcset="${album.images.medium}">
               <source media="(min-width: 335px)" srcset="${album.images.large}">
-              <img loading="lazy" src="${album.images.large}" alt="${album.title}" class="album-image"/>
+              <img loading="lazy" src="${album.images.original}" alt="${album.title}" class="album-image"/>
             </picture>
           </div>
           <div class="card-body">
