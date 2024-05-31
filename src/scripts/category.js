@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </picture>
           </div>
           <div class="card-body">
-            <h3>${album.title}</h3>
+            <h2>${album.title}</h2>
             <p>${album.shortDescription}</p>
             <a href="detail.html?id=${album.id}" class="btn">Más Info</a>
           </div>`;
