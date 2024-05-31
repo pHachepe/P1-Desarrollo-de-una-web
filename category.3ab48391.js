@@ -8,8 +8,8 @@ var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
             </picture>
           </div>
           <div class="card-body">
-            <h3>${i.title}</h3>
+            <h2>${i.title}</h2>
             <p>${i.shortDescription}</p>
             <a href="detail.html?id=${i.id}" class="btn">M\xe1s Info</a>
           </div>`,e.appendChild(t)})});
-//# sourceMappingURL=category.3afa79c1.js.map
+//# sourceMappingURL=category.3ab48391.js.map

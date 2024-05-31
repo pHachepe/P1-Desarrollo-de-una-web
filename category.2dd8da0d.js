@@ -8,8 +8,8 @@ var e,i,t,a,d;i={},t={},null==(a=(e="undefined"!=typeof globalThis?globalThis:"u
             </picture>
           </div>
           <div class="card-body">
-            <h3>${i.title}</h3>
+            <h2>${i.title}</h2>
             <p>${i.shortDescription}</p>
             <a href="detail.html?id=${i.id}" class="btn">M\xe1s Info</a>
           </div>`,e.appendChild(t)})});
-//# sourceMappingURL=category.4d5d2fab.js.map
+//# sourceMappingURL=category.2dd8da0d.js.map
