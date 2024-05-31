@@ -1,16 +1,60 @@
-@media (max-width: 420px) {
-  h1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media (max-width: 1024px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-1024.webp") no-repeat center / cover;
+
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-1024.webp") no-repeat
+        center / cover;
+    }
   }
 
-  #home .clip-path-container {
-    // En pantallas pequeñas, ocultar el clip-path de la estrella
-    display: none;
+  .logo {
+    max-width: 150px;
+  }
+
+  .album-detail-container {
+    margin-right: 0;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .recommended-albums {
+    margin-top: 1rem;
+    width: 100%;
+
+    #recommended-list {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+
+    .album-card {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding-right: 1rem;
+      width: 300px;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-768.webp") no-repeat center / cover;
+
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-768.webp") no-repeat
+        center / cover;
+    }
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
   header {
     .menu-toggle {
       display: block; // Se muestra solo en pantallas pequeñas
@@ -87,42 +131,23 @@
   }
 }
 
-@media (max-width: 1024px) {
-  .album-detail-container {
-    margin-right: 0;
-  }
+@media (max-width: 420px) {
+  #home {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../assets/images/portada/portada-420.webp") no-repeat center / cover;
 
-  .content-wrapper {
-    flex-direction: column;
-  }
-
-  .recommended-albums {
-    margin-top: 1rem;
-    width: 100%;
-
-    #recommended-list {
-      display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-    }
-
-    .album-card {
-      display: inline-block;
-      flex: 0 0 auto;
-      padding-right: 1rem;
-      width: 300px;
+    .clip-path-container {
+      background: url("../assets/images/portada/portada-420.webp") no-repeat
+        center / cover;
     }
   }
-}
 
-@media (min-width: 768px) {
   .logo {
-    max-width: 120px;
+    max-width: 80px;
   }
-}
 
-@media (min-width: 1024px) {
-  .logo {
-    max-width: 150px;
+  #home .clip-path-container {
+    // En pantallas pequeñas, ocultar el clip-path de la estrella
+    display: none;
   }
 }
