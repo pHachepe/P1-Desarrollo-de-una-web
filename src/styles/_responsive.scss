@@ -80,15 +80,6 @@
   .footer-nav ul li a i {
     margin-right: 0.5rem;
   }
-
-  .footer-logo-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-logo {
-    max-width: 100px;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -116,5 +107,17 @@
       padding-right: 1rem;
       width: 300px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    max-width: 150px;
   }
 }

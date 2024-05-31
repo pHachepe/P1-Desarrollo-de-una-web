@@ -37,13 +37,7 @@ header {
     width: 100%;
     max-width: 300px;
     height: auto;
-
-    .logo {
-      width: 100px;
-      height: auto;
-      aspect-ratio: 1 / 1;
-      cursor: pointer;
-    }
+    text-decoration: none;
 
     .title {
       font-family: "Rock Salt", cursive;

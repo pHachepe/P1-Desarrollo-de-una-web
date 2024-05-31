@@ -8,17 +8,11 @@ footer {
   padding: 1rem;
   text-align: center;
   width: 100%;
-}
 
-.footer-logo-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.footer-logo {
-  max-width: 150px;
-  height: auto;
+  .logo-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer-nav ul {

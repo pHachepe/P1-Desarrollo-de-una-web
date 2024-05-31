@@ -1,7 +1,20 @@
 <header aria-label="Cabecera de la web" id="header">
   <a href="index.html" class="logo-container">
     <img
-      src="../assets/images/logo.webp"
+      srcset="
+        ../assets/images/logo/logo-80.webp      80w,
+        ../assets/images/logo/logo-80@2x.webp  160w,
+        ../assets/images/logo/logo-120.webp    120w,
+        ../assets/images/logo/logo-120@2x.webp 240w,
+        ../assets/images/logo/logo-150.webp    150w,
+        ../assets/images/logo/logo-150@2x.webp 300w
+      "
+      sizes="
+      (max-width: 767px) 80px,
+      (min-width: 768px) and (max-width: 1023px) 120px,
+      (min-width: 1024px) 150px
+      "
+      src="../assets/images/logo/logo-120.webp"
       alt="Logo Marea"
       class="logo"
       id="logo"
