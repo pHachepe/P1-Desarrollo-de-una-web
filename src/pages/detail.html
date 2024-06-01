@@ -18,6 +18,60 @@
           <div class="album-image-container">
             <h2 id="album-title" class="album-title">Cargando...</h2>
             <img id="album-cover" alt="Cargando..." class="album-image" />
+            <div class="social-icons">
+              <!--
+                Los iconos de redes sociales son imágenes svg por lo que son completamente responsive por defecto.
+                El tamaño de los iconos se ajusta automáticamente al tamaño del contenedor en el que se encuentran.
+                Simplemente le añado un atributo srcset de la imagen en formato png para que se muestre en navegadores que no soporten svg.
+              -->
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                title="Facebook"
+              >
+                <picture>
+                  <source
+                    srcset="../assets/images/social/facebook.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../assets/images/social/facebook.png"
+                    alt="Facebook"
+                    class="social-icon"
+                  />
+                </picture>
+              </a>
+              <a href="https://www.twitter.com" target="_blank" title="Twitter">
+                <picture>
+                  <source
+                    srcset="../assets/images/social/twitter.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../assets/images/social/twitter.png"
+                    alt="Twitter"
+                    class="social-icon"
+                  />
+                </picture>
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                title="Instagram"
+              >
+                <picture>
+                  <source
+                    srcset="../assets/images/social/instagram.svg"
+                    type="image/svg+xml"
+                  />
+                  <img
+                    src="../assets/images/social/instagram.png"
+                    alt="Instagram"
+                    class="social-icon"
+                  />
+                </picture>
+              </a>
+            </div>
           </div>
           <div class="song-list">
             <h3>Canciones</h3>
