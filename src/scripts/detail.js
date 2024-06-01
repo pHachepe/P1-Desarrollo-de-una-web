@@ -52,8 +52,16 @@ const loadRecommendedAlbums = (currentAlbumId) => {
   recommendedAlbums.forEach((album) => {
     const albumCard = document.createElement("div");
     albumCard.className = "album-card";
+    const pictureElement = `
+        <picture>
+          <source media="(max-width: 320px)" srcset="${album.images.small}">
+          <source media="(min-width: 321px) and (max-width: 767px)" srcset="${album.images.medium}">
+          <source media="(min-width: 768px)" srcset="${album.images.large}">
+          <img src="${album.images.original}" alt="${album.title}" class="recommended-album-image" loading="lazy">
+        </picture>
+      `;
     albumCard.innerHTML = `
-      <img src="${album.images.small}" alt="${album.title}" class="recommended-album-image" loading="lazy">
+      ${pictureElement}
       <div class="recommended-album-title">${album.title}</div>
     `;
     albumCard.onclick = () =>

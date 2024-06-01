@@ -44,9 +44,9 @@ import azogueImageMedium from "../assets/images/albums/medium_webp/09-el-azogue-
 import azogueImageLarge from "../assets/images/albums/large_webp/09-el-azogue-large.webp";
 
 import potrosImageOriginal from "../assets/images/albums/original/10-los-potros-del-tiempo.jpg";
-import potrosImageSmall from "../assets/images/albums/small_webp/10-los-potros-del-tiempo-small.webp";
-import potrosImageMedium from "../assets/images/albums/medium_webp/10-los-potros-del-tiempo-medium.webp";
-import potrosImageLarge from "../assets/images/albums/large_webp/10-los-potros-del-tiempo-large.webp";
+import potrosImageSmall from "../assets/images/albums/small_webp/10-los-potros-del-tiempo-small-direction-art.webp";
+import potrosImageMedium from "../assets/images/albums/medium_webp/10-los-potros-del-tiempo-medium-direction-art.webp";
+import potrosImageLarge from "../assets/images/albums/large_webp/10-los-potros-del-tiempo-large-direction-art.webp";
 
 
 export const albums = [
