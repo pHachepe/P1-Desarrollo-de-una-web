@@ -17,7 +17,7 @@
         <div class="album-content" tabindex="-1">
           <div class="album-image-container">
             <h2 id="album-title" class="album-title">Cargando...</h2>
-            <img id="album-cover" alt="Cargando..." class="album-image" />
+            <img id="album-cover" alt="Cargando..." class="album-image" loading="lazy" />
             <div class="social-icons">
               <!--
                 Los iconos de redes sociales son imágenes svg por lo que son completamente responsive por defecto.
@@ -38,6 +38,7 @@
                     src="../assets/images/social/facebook.png"
                     alt="Facebook"
                     class="social-icon"
+                    loading="lazy"
                   />
                 </picture>
               </a>
@@ -51,6 +52,7 @@
                     src="../assets/images/social/twitter.png"
                     alt="Twitter"
                     class="social-icon"
+                    loading="lazy"
                   />
                 </picture>
               </a>
@@ -68,6 +70,7 @@
                     src="../assets/images/social/instagram.png"
                     alt="Instagram"
                     class="social-icon"
+                    loading="lazy"
                   />
                 </picture>
               </a>
@@ -89,6 +92,6 @@
 
     <include src="./components/footer.html"></include>
 
-    <script type="module" src="../scripts/detail.js"></script>
+    <script type="module" src="../scripts/detail.js" defer></script>
   </body>
 </html>

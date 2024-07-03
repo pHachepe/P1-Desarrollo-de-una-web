@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <source media="(max-width: 320px)" srcset="${album.images.small}">
             <source media="(min-width: 321px) and (max-width: 767px)" srcset="${album.images.medium}">
             <source media="(min-width: 768px)" srcset="${album.images.large}">
-            <img src="${album.images.original}" alt="Portada del disco ${album.title}" class="album-image">
+            <img src="${album.images.original}" alt="Portada del disco ${album.title}" class="album-image" loading="lazy">
           </picture>
         `;
       albumCoverElement.outerHTML = pictureElement;
